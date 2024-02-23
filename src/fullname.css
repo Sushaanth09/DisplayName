@@ -1,0 +1,19 @@
+input {
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+label {
+    margin-right: 5px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: white;
+    cursor: pointer;
+    margin-left: 20px;
+    border-radius: 4px;
+}
