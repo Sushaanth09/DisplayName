@@ -8,6 +8,13 @@ function FullName() {
 
 const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (firstName.trim() === "" || lastName.trim() === "") {
+        alert("Please fill out both first name and last name.");
+        return;
+    }
+
+
     const fullNameValue = `${firstName} ${lastName}`;
     setFullName(fullNameValue)
 
@@ -19,7 +26,7 @@ const handleSubmit = (e) => {
      <form onSubmit={handleSubmit}>
         <div>
         <label htmlFor="firstName">First Name :</label>
-        <input type="name"
+        <input type="text"
             id="firstName"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
@@ -28,7 +35,7 @@ const handleSubmit = (e) => {
         </div>
         <div>
         <label htmlFor="lastName">Last Name :</label>
-        <input type="name"
+        <input type="text"
             id="lastName"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
