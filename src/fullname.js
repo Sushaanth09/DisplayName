@@ -6,8 +6,8 @@ function FullName() {
     const [lastName, setLastName] = useState("");
     const [fullName, setFullName] = useState("");
 
-const handleSubmit = (e) => {
-    e.preventDefault();
+const handleSubmit = (event) => {
+    event.preventDefault();
 
     if (firstName.trim() === "" || lastName.trim() === "") {
         alert("Please fill out both first name and last name.");
@@ -17,12 +17,11 @@ const handleSubmit = (e) => {
 
     const fullNameValue = `${firstName} ${lastName}`;
     setFullName(fullNameValue)
-
-    setFirstName("")
-    setLastName("")
 }
+
   return (
    <div>
+     <h1>Full Name Display</h1>
      <form onSubmit={handleSubmit}>
         <div>
         <label htmlFor="firstName">First Name :</label>
